@@ -46,7 +46,7 @@ The dataset is one year of order-level transaction history: **1,000 orders** acr
 | `OrderValue` | Order total, in USD ($) |
 
 <p align="center">
- <img src="assets/data-snippet.png" width="500" alt="Hours Listened">
+ <img src="assets/data-snippet.png" width="500" alt="Data Snippet">
 </p>
 
 **Quality checks performed before analysis:**
