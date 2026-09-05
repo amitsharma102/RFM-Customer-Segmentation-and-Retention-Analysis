@@ -45,7 +45,9 @@ The dataset is one year of order-level transaction history: **1,000 orders** acr
 | `ProductType` | Product category purchased |
 | `OrderValue` | Order total, in USD ($) |
 
-<p align="center"><img width="576" height="559" alt="Dataset snippet" src="https://github.com/user-attachments/assets/383e3b71-30d0-4eb4-b6a6-79ed92c248e1" /></p>
+<p align="center">
+ <img src="assets/data-snippet.png" width="500" alt="Hours Listened">
+</p>
 
 **Quality checks performed before analysis:**
 - ✅ Checked `OrderID` for duplicate values
@@ -155,7 +157,9 @@ The RFM analysis grouped customers into five segments. **61 Best Customers** for
 
 ### 🏆 Best Customers — 61 customers · RFM Score ≥ 13
 
-<p align="center"><img width="770" height="897" alt="Best Customers segment breakdown" src="https://github.com/user-attachments/assets/b956d2f7-3de8-4617-a677-10e6e388237d" /></p>
+<p align="center">
+ <img src="assets/best-customers.png" width="500" alt="Best Customers">
+</p>
 
 PrintPlus Studios' most valuable customers — highly recent, highly frequent, and high-spending. This segment alone generates **~39% of total revenue**.
 
@@ -167,7 +171,9 @@ PrintPlus Studios' most valuable customers — highly recent, highly frequent, a
 
 ### ⚠️ Need Attention — 57 customers · RFM Score 4–6
 
-<p align="center"><img width="713" height="822" alt="Need Attention segment breakdown" src="https://github.com/user-attachments/assets/1382b4dd-6835-4fda-a65c-de20b37db224" /></p>
+<p align="center">
+ <img src="assets/need-attention.png" width="500" alt="Need Attention">
+</p>
 
 The largest segment after Best Customers, with recency, frequency, and spend all trending downward. This is the clearest candidate group for reactivation before they churn entirely.
 
@@ -179,7 +185,9 @@ The largest segment after Best Customers, with recency, frequency, and spend all
 
 ### 🔻 At Risk — 13 customers · RFM Score = 3
 
-<p align="center"><img width="1052" height="333" alt="At Risk segment breakdown" src="https://github.com/user-attachments/assets/7f9d04c3-5aa7-45d6-92d0-63affa9fb36c" /></p>
+<p align="center">
+ <img src="assets/at-risk.png" width="500" alt="At Risk">
+</p>
 
 The smallest and lowest-engagement segment — every customer here scores the minimum on all three dimensions.
 
