@@ -14,7 +14,6 @@
 - [Recommendations](#recommendations)
 - [Tools and Skills Demonstrated](#tools-and-skills-demonstrated)
 - [Repository Contents](#repository-contents)
-- [Contact](#contact)
 
 ---
 
