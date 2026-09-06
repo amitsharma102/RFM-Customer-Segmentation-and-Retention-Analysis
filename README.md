@@ -1,10 +1,9 @@
 # 📊 PrintPlus Studios — RFM Customer Segmentation & Retention Analysis
 
-*Turning one year of e-commerce order data into customer segments and actionable retention strategy — built entirely in Excel.*
+*Turning one year of e-commerce order data into customer segments and actionable retention strategy*
 
-![Excel](https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white)
-![Method](https://img.shields.io/badge/Method-RFM%20Analysis-2C6EAA?style=flat-square)
-![Status](https://img.shields.io/badge/Status-Complete-2E8B57?style=flat-square)
+![Excel](https://img.shields.io/badge/Built%20with-Microsoft%20Excel-217346?style=flat&logo=microsoftexcel&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Complete-2E8B57?style=flat&logo=microsoftexcel&logoColor=white)
 
 ## Table of Contents
 - [Overview](#overview)
@@ -35,7 +34,7 @@ Like many growing e-commerce businesses, PrintPlus had a year's worth of order d
 
 ## 🗂️ Data Overview
 
-The dataset is one year of order-level transaction history: **1,000 orders** across roughly **287 unique customers**¹.
+The dataset is one year of order-level transaction history: **1,000 orders** across roughly **287 unique customers**.
 
 | Field | Description |
 |---|---|
@@ -43,18 +42,12 @@ The dataset is one year of order-level transaction history: **1,000 orders** acr
 | `CustomerID` | Identifies which customer placed the order |
 | `OrderDate` | Date the order was placed |
 | `ProductType` | Product category purchased |
-| `OrderValue` | Order total, in USD ($) |
-
-<p align="center">
- <img src="assets/data-snippet.png" width="500" alt="Data Snippet">
-</p>
+| `OrderValue` | Order total, in USD ($) |r
 
 **Quality checks performed before analysis:**
 - ✅ Checked `OrderID` for duplicate values
 - ✅ Checked `OrderDate`, `OrderValue`, and `CustomerID` for blanks or missing values
 - ✅ Verified the earliest and latest transaction dates to confirm the analysis window
-
-<sub>¹ Derived from the formula ranges used in the RFM calculations (`$B$2:$B$288`).</sub>
 
 ---
 
@@ -98,11 +91,6 @@ R, F, and M scores are summed into an **RFM Score**, which maps to five segments
 
 ### Excel Formulas
 
-Everything was built natively in Excel using `IFS()` and `PERCENTILE.INC()`.
-
-<details>
-<summary><b>Show the full formula set</b></summary>
-
 **Days since last purchase (feeds the Recency column)**
 
 ```
@@ -141,8 +129,6 @@ Everything was built natively in Excel using `IFS()` and `PERCENTILE.INC()`.
 
 📄 Full formula documentation: [Google Doc](https://docs.google.com/document/d/11wYtmhPXSS-ClJ5QhHnWWfoReHPZVQd5/edit?usp=sharing&ouid=102165638531054537510&rtpof=true&sd=true)
 
-</details>
-
 ---
 
 ## 📊 Key Insights
@@ -158,7 +144,7 @@ The RFM analysis grouped customers into five segments. **61 Best Customers** for
 ### 🏆 Best Customers — 61 customers · RFM Score ≥ 13
 
 <p align="center">
- <img src="assets/best-customers.png" width="500" alt="Best Customers">
+ <img src="assets/best-customers.png" width="700" alt="Best Customers">
 </p>
 
 PrintPlus Studios' most valuable customers — highly recent, highly frequent, and high-spending. This segment alone generates **~39% of total revenue**.
@@ -169,10 +155,17 @@ PrintPlus Studios' most valuable customers — highly recent, highly frequent, a
 | Frequency | ~6 orders/year | F=5: 89% · F=4: 11% |
 | Monetary | $110.88 per customer | M=5: 74% · M=4: 25% · M=3: 5% |
 
+**Recency** — 46% (28 customers) in this segment made purchases more recently than 80% of the entire customer base. 38% (23 customers) purchased more recently than 60% of customers, and 16% (10 customers) purchased more recently than 40% of customers. The best customer segment is composed largely of highly recent purchasers.
+
+**Frequency** — 89% (54 customers) in this segment made purchases more frequently than 80% of the customer base, while the remaining 11% (7 customers) purchased more frequently than 60% of customers. The entire best customer segment consistently falls within the highest-frequency tiers.
+
+**Monetary** — 74% (45 customers) in this segment spend more than 80% of all customers, 25% (15 customers) spend more than 60% of customers, and 5% (1 customer) spend more than 40% of customers. The best customer segment is largely composed of high-value spenders who generate a significant share of overall revenue.
+
+
 ### ⚠️ Need Attention — 57 customers · RFM Score 4–6
 
 <p align="center">
- <img src="assets/need-attention.png" width="500" alt="Need Attention">
+ <img src="assets/need-attention.png" width="700" alt="Need Attention">
 </p>
 
 The largest segment after Best Customers, with recency, frequency, and spend all trending downward. This is the clearest candidate group for reactivation before they churn entirely.
@@ -183,10 +176,17 @@ The largest segment after Best Customers, with recency, frequency, and spend all
 | Frequency | ~2 orders/year | F=3: 4% · F=2: 70% · F=1: 26% |
 | Monetary | $23.65 per customer | M=3: 7% · M=2: 32% · M=1: 61% |
 
+**Recency** — 5% (3 customers) in this segment purchased more recently than 60% of the customer base, 16% (9 customers) purchased more recently than 40% of customers, 37% (21 customers) purchased more recently than 20% of customers, and 43% (24 customers) purchased less recently than 80% of customers, placing them in the bottom 20% for recency. The need attention segment is characterised by a substantial share of customers whose last purchase occurred a significant time ago, indicating declining engagement and an elevated risk of churn.
+
+**Frequency** — 4% (2 customers) purchase more frequently than 40% of the customer base, 70% (40 customers) purchase more frequently than 20% of customers, and 26% (15 customers) purchase less frequently than 80% of customers, placing them in the bottom 20% for purchase frequency. The need attention segment is dominated by customers with low purchase frequency, indicating limited repeat-buying behaviour and weaker purchasing consistency.
+
+**Monetary** — 7% (4 customers) in this segment spend more than 40% of the customer base, 32% (18 customers) spend more than 20% of customers, and 61% (35 customers) spend less than 80% of customers, placing them in the bottom 20% for total spending. The need attention segment is predominantly composed of low-spending customers with limited revenue contribution.
+
+
 ### 🔻 At Risk — 13 customers · RFM Score = 3
 
 <p align="center">
- <img src="assets/at-risk.png" width="500" alt="At Risk">
+ <img src="assets/at-risk.png" width="700" alt="At Risk">
 </p>
 
 The smallest and lowest-engagement segment — every customer here scores the minimum on all three dimensions.
@@ -196,6 +196,14 @@ The smallest and lowest-engagement segment — every customer here scores the mi
 | Recency | 284 days since last order | R=1: 100% |
 | Frequency | ~1 order/year | F=1: 100% |
 | Monetary | $10.67 per customer | M=1: 100% |
+
+
+**Recency** — 100% (13 customers) in this segment purchased less recently than 80% of the customer base, placing all of them in the bottom 20% for recency. The at risk segment has been inactive for a long period and shows a high likelihood of disengagement.
+
+**Frequency** — 100% (13 customers) in this segment purchase less frequently than 80% of the customer base, placing them in the bottom 20% for purchase frequency. The at risk segment reflects consistently low repeat-buying behaviour, signalling weak loyalty and limited interaction with the business.
+
+**Monetary** — 100% (13 customers) in this segment spend less than 80% of the customer base, placing them in the bottom 20% for total spending. The at risk segment contributes the lowest revenue levels in the dataset.
+
 
 ---
 
@@ -221,18 +229,9 @@ The smallest and lowest-engagement segment — every customer here scores the mi
 
 ## 📁 Repository Contents
 
-- 📊 Excel workbook — raw transaction data, RFM scoring, and summary tables
+- 📊 [Excel workbook](./ExcelWorkbook_PrintShopOrders.xlsx) — raw transaction data, RFM scoring, and summary tables
 - 📄 [Formula reference document](https://docs.google.com/document/d/11wYtmhPXSS-ClJ5QhHnWWfoReHPZVQd5/edit?usp=sharing&ouid=102165638531054537510&rtpof=true&sd=true) — every formula used in this analysis
+- 🖼️ [assets](./assets) — segment screenshots used in this README (`best-customers.png`, `need-attention.png`, `at-risk.png`)
 - 📝 This README
 
 ---
-
-## 📬 Contact
-
-Questions or feedback on this analysis are welcome — feel free to reach out or connect:
-
-- **Email:** your.email@example.com
-- **LinkedIn:** linkedin.com/in/your-profile
-- **Portfolio:** your-portfolio-site.com
-
-<sub>*(Update the contact details above with your own.)*</sub>
