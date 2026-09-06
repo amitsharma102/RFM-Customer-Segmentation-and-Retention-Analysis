@@ -2,7 +2,7 @@
 
 *Turning one year of e-commerce order data into customer segments and actionable retention strategy*
 
-![Excel](https://img.shields.io/badge/Built%20with-Microsoft%20Excel-217346?style=flat&logo=microsoftexcel&logoColor=white)
+![Excel](https://img.shields.io/badge/Tool%20-Microsoft%20Excel-217346?style=flat&logo=microsoftexcel&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Complete-2E8B57?style=flat)
 
 ## Table of Contents
