@@ -31,7 +31,7 @@ Like many growing e-commerce businesses, PrintPlus had a year's worth of order d
 
 ---
 
-## 🗂️ Data Overview
+## 📂 Data Overview
 
 The dataset is one year of order-level transaction history: **1,000 orders** across roughly **287 unique customers**.
 
@@ -216,7 +216,7 @@ The smallest and lowest-engagement segment — every customer here scores the mi
 
 ---
 
-## 🛠️ Tools and Skills Demonstrated
+## 🔧 Tools and Skills Demonstrated
 
 - **Microsoft Excel** — `IFS()`, `PERCENTILE.INC()`, `TODAY()`, and nested logical formulas
 - **RFM segmentation** — translating raw transactional data into customer value tiers
